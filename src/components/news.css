@@ -1,0 +1,47 @@
+.main-body {
+  margin-top: 4rem;
+}
+.card {
+  width: 30rem;
+
+  height: 25rem;
+  border: solid black 5px;
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  border-style: inset;
+  padding: 0.5rem;
+  background-color: rgb(241, 236, 236);
+  z-index: 0;
+}
+
+.image {
+  width: 100%;
+  height: 11rem;
+  background-size: cover;
+  background-image: url(/Users/abhishek/Documents/coding/React/newswebsite/src/components/empty.jpg);
+  border-radius: 1rem;
+}
+.card-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-title {
+}
+.description {
+  margin: 0;
+}
+.name-publisher {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: gray;
+
+  margin: 0;
+}
+.date {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  margin: 0;
+}
