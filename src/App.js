@@ -9,7 +9,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const URL = `https://newsapi.org/v2/everything?q=${query}&from=2023-12-06&to=2023-12-12&language=en&apiKey={your api key}`;
+    // const URL = `https://newsapi.org/v2/everything?q=${query}&from=2023-12-06&to=2023-12-12&language=en&apiKey=317f41ebc2d7416380140d6192f2c857`;
     fetch(URL)
       .then((response) => response.json())
       .then((news) => {
@@ -22,7 +22,7 @@ function App() {
       });
   }, [query]);
   // console.log(articles);
-  if (query == "") {
+  if (query === "") {
     setQuery("india");
   }
   return (

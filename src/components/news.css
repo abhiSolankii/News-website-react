@@ -1,6 +1,10 @@
 .main-body {
   margin-top: 4rem;
 }
+/* .main-body :hover {
+  transform: scale(1.1);
+} */
+
 .card {
   width: 30rem;
 
@@ -25,8 +29,8 @@
 .card-body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.card-title {
-}
+/* .card-title {
+} */
 .description {
   margin: 0;
 }

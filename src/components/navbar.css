@@ -47,6 +47,9 @@ boyd {
   border-radius: 0.5rem;
   font-size: large;
 }
+.input-box:hover {
+  transform: scale(1.1);
+}
 .button {
   width: 10rem;
   height: 3rem;
