@@ -23,7 +23,7 @@
   width: 100%;
   height: 11rem;
   background-size: cover;
-  background-image: url(/Users/abhishek/Documents/coding/React/newswebsite/src/components/empty.jpg);
+  background-image: url(https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg);
   border-radius: 1rem;
 }
 .card-body {

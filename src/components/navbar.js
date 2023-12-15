@@ -1,6 +1,5 @@
 import React from "react";
 import "../components/navbar.css";
-import Logo from "./logo.jpg";
 
 const navbar = (props) => {
   const set = props.setQuery;
@@ -8,7 +7,11 @@ const navbar = (props) => {
     <div>
       <nav className="navbar">
         <div className="logo-title">
-          <img className="logo" src={Logo} alt="logo" />
+          <img
+            className="logo"
+            src={`https://st2.depositphotos.com/6789684/12262/v/450/depositphotos_122620866-stock-illustration-illustration-of-flat-icon.jpg`}
+            alt="logo"
+          />
           <h3 className="title">News</h3>
         </div>
         <div className="input-button">
