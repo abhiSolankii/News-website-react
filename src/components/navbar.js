@@ -2,7 +2,9 @@ import React from "react";
 import "../components/navbar.css";
 
 const navbar = (props) => {
-  const set = props.setQuery;
+  const setQuery = props.setQuery;
+  const setlang = props.setlang;
+
   return (
     <div>
       <nav className="navbar">
@@ -14,21 +16,36 @@ const navbar = (props) => {
           />
           <h3 className="title">News</h3>
         </div>
-        <div className="input-button">
+
+        <div className="language">
+          <select
+            className="language-select"
+            onChange={(event) => {
+              setlang(event.target.value);
+            }}
+          >
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japanese</option>
+            <option value="de">German</option>
+          </select>
+        </div>
+
+        <div>
+          <button className="button" type="submit">
+            UPDATE
+          </button>
+        </div>
+        <div className="input">
           <input
             className="input-box"
             id="input-box"
             type="text"
             onChange={(event) => {
-              set(event.target.value);
+              setQuery(event.target.value);
             }}
             placeholder="Search topic..."
           />
-          <div>
-            <button className="button" type="submit">
-              Search
-            </button>
-          </div>
         </div>
       </nav>
     </div>

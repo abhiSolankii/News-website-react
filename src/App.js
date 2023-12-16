@@ -8,8 +8,11 @@ function App() {
 
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [lang, setlang] = useState("en");
+
   useEffect(() => {
-    const URL = `https://newsapi.org/v2/everything?q=${query}&from=2023-12-010&to=2023-12-12&language=en&apiKey=317f41ebc2d7416380140d6192f2c857`;
+    const URL = `https://newsapi.org/v2/everything?q=${query}&from=2023-12-13&language=${lang}&sortBy=popularity&apiKey=317f41ebc2d7416380140d6192f2c857`;
     fetch(URL)
       .then((response) => response.json())
       .then((news) => {
@@ -20,7 +23,7 @@ function App() {
         console.log("Error occurred ", error);
         setLoading(false);
       });
-  }, [query]);
+  }, [query, lang]);
   // console.log(articles);
   if (query === "") {
     setQuery("sports");
@@ -31,7 +34,7 @@ function App() {
         <div>Loading...</div>
       ) : (
         <div>
-          <Navbar setQuery={setQuery} />
+          <Navbar setQuery={setQuery} setlang={setlang} />
           <div className="main">
             {articles && articles.length > 0 ? (
               articles.map((article) => (

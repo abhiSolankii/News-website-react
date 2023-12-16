@@ -1,5 +1,7 @@
 .main-body {
   margin-top: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 /* .main-body :hover {
   transform: scale(1.1);
