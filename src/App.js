@@ -12,7 +12,7 @@ function App() {
   const [lang, setlang] = useState("en");
 
   useEffect(() => {
-    const URL = `https://newsapi.org/v2/everything?q=${query}&from=2024-02-15&language=${lang}&sortBy=popularity&apiKey=317f41ebc2d7416380140d6192f2c857`;
+    const URL = `https://newsapi.org/v2/everything?q=${query}&from=2024-07-11&language=${lang}&sortBy=popularity&apiKey=317f41ebc2d7416380140d6192f2c857`;
     fetch(URL)
       .then((response) => response.json())
       .then((news) => {
