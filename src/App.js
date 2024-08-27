@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const date = new Date();
-    const year = date.getFullYear();
+    let year = date.getFullYear();
     let month = date.getMonth() + 1;
     let day = date.getDate();
 
