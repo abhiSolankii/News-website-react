@@ -37,7 +37,7 @@ function App() {
     const formattedDate = `${year}-${month}-${day}`;
 
     const fetchArticles = async () => {
-      const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
+      const URL = `https://news-website-react.onrender.com/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
       try {
         const response = await axios.get(URL);
         // console.log(response);
