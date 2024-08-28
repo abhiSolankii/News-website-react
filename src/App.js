@@ -40,7 +40,7 @@ function App() {
     const fetchArticles = async () => {
       // const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
       // const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}&date2=${date2}`;
-      const URL = `http://localhost:4000/api/news?query=${query}&lang=${lang}`;
+      const URL = `https://news-website-react.onrender.com/api/news?query=${query}&lang=${lang}`;
 
       try {
         const response = await axios.get(URL);
