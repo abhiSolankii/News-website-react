@@ -7,7 +7,11 @@ const PORT = 4000;
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://ocean-news-react.netlify.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://ocean-news-react.netlify.app",
+      "https://66cf9a626bfc17329b7d6639-celadon-pon.netlify.app",
+    ],
   })
 );
 // News API route
