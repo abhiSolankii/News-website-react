@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import News from "./components/news.js";
 import Navbar from "./components/navbar.js";
+import axios from "axios";
 
 function App() {
   const [query, setQuery] = useState("sports");
@@ -35,17 +36,19 @@ function App() {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    const URL = `https://newsapi.org/v2/everything?q=${query}&from=${formattedDate}&language=${lang}&sortBy=popularity&apiKey=66a98efbcd784ed2b277b477a94cb022`;
-    fetch(URL)
-      .then((response) => response.json())
-      .then((news) => {
-        setArticles(news.articles);
+    const fetchArticles = async () => {
+      const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
+      try {
+        const response = await axios.get(URL);
+        // console.log(response);
+        setArticles(response.data.articles);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.log("Error occurred ", error);
         setLoading(false);
-      });
+      }
+    };
+    fetchArticles();
   }, [query, lang]);
 
   return (
