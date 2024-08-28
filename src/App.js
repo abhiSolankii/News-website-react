@@ -15,6 +15,7 @@ function App() {
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
     let day = date.getDate();
+    const date2 = `${year}-${month}-${day}`;
 
     if (day === 1) {
       month -= 1;
@@ -37,7 +38,10 @@ function App() {
     const formattedDate = `${year}-${month}-${day}`;
 
     const fetchArticles = async () => {
-      const URL = `https://news-website-react.onrender.com/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
+      // const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}`;
+      // const URL = `http://localhost:4000/api/news?query=${query}&date=${formattedDate}&lang=${lang}&date2=${date2}`;
+      const URL = `http://localhost:4000/api/news?query=${query}&lang=${lang}`;
+
       try {
         const response = await axios.get(URL);
         // console.log(response);

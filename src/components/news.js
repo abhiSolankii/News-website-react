@@ -5,7 +5,7 @@ const News = (props) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <img
-        src={props.article.urlToImage}
+        src={props.article.image}
         className="w-full h-48 object-cover"
         alt="News"
       />
@@ -23,8 +23,8 @@ const News = (props) => {
           </a>
         </p>
         <div className="text-gray-600 text-sm">
-          <p className="mb-1">Author: {props.article.author}</p>
-          <p className="mb-1">Publisher: {props.article.source.name}</p>
+          <p className="mb-1">Author: {props.article.source.name}</p>
+          <p className="mb-1">Publisher: {props.article.source.url}</p>
           <p className="mb-1">
             Date: {props.article.publishedAt.substring(0, 10)}
           </p>
