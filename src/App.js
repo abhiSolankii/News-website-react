@@ -35,7 +35,7 @@ function App() {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    const URL = `https://newsapi.org/v2/everything?q=${query}&from=${formattedDate}&language=${lang}&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+    const URL = `https://newsapi.org/v2/everything?q=${query}&from=${formattedDate}&language=${lang}&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API_KEY2}`;
     fetch(URL)
       .then((response) => response.json())
       .then((news) => {
